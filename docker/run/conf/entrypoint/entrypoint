@@ -1,0 +1,10 @@
+#!/bin/sh
+set -e
+
+if [ "$1" = 'run' ]; then
+	cp -r /tmp/conf/* /host/
+	chmod -R a+w /host
+	exit
+fi
+
+exec "$@"
